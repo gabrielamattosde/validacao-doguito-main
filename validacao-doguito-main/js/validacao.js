@@ -17,10 +17,36 @@ export function valida(input) {
 
     if(input.validity.valid) {
         input.parentElement.classList.remove('input-container--invalido')
+        input.parentElement.querySelector('.input-mensagem-erro').innerHTML = ''
 
     } else {
         input.parentElement.classList.add('input-container--invalido')
+        input.parentElement.querySelector('.input-mensagem-erro').innerHTML = ''
+
     }
+}
+
+const mensagemErro = {
+    nome: {
+        valueMissing: 'O campo nome não pode estar vazio.'
+    },
+
+    email: {
+        valueMissing: 'O campo e-mail não pode estar vazio.',
+        typemissing: 'O e-mail digitado não é válido'
+    },
+
+    senha: {
+    valueMissing: 'O campo senha não pode estar vazio.',
+    patternMisMatch: 'A senha deve conter entre  e 12 caracteres, pelo menos uma letra maiúscula, pelo menos uma letra minuscúla, pelo menos um número'
+
+    },
+
+    dataNascimento: {
+        valueMissing: 'O campo data nascimento não pode estar vazio',
+        customError: 'Você deve ser maior que 18 anos para se cadastrar'
+    }
+
 }
 
 const validadores = {
