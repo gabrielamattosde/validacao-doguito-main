@@ -24,17 +24,17 @@
                 <fieldset>
                     <legend class="formulario__legenda">Informações básicas</legend>
                     <div class="input-container">
-                        <input name="nome" id="nome" class="input" type="text" placeholder="Nome" required>
+                        <input name="nome" id="nome" class="input" type="text" placeholder="Nome" data-tipo="nome" required>
                         <label class="input-label" for="nome">Nome</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="email" id="email" class="input" type="Email" required placeholder="Email">
+                        <input name="email" id="email" class="input" type="Email" required placeholder="Email" data-tipo="email">
                         <label class="input-label" for="email">Email</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="senha" id="senha" class="input" type="password" placeholder="Senha" pattern="^[a-zA-Z]\w{6,14}$" title="A senha deve conter entre  e 12 caracteres, 
+                        <input name="senha" id="senha" class="input" type="password" placeholder="Senha" data-tipo="senha" pattern="^[a-zA-Z]\w{6,14}$" title="A senha deve conter entre  e 12 caracteres, 
                         pelo menos uma letra maiúscula, 
                         pelo menos uma letra minuscúla, pelo menos um número"  required>
                         <label class="input-label" for="senha">Senha</label>
